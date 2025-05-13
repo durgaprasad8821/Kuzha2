@@ -61,3 +61,25 @@ const slides = document.querySelectorAll('.carousel-item');
         </div>
       `;
     }
+
+
+ const form = document.getElementById("contact-form");
+  const responseMsg = document.getElementById("response-msg");
+
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    fetch("https://script.google.com/macros/s/AKfycbxVzZorGDvWf5aAQKkn3HxV7flZCIxpujoFssfPFPVZo-fsWjv788Tqrsu39Qou91J3FA/exec", {
+      method: "POST",
+      body: formData
+    })
+    .then(res => res.text())
+    .then(data => {
+      responseMsg.innerText = data;
+      form.reset();
+    })
+    .catch(err => {
+      responseMsg.innerText = "Something went wrong!";
+      console.error(err);
+    });
+  });
