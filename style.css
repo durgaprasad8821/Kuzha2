@@ -1,13 +1,13 @@
  body {
-      margin: 0;
-      padding: 0;
-      color: white;
+      margin: 0px;
+      padding:0px;
     }
-
-    .navbar {
+    .navbar{
+      width: 100vw;
       background-color: #000;
-      
       padding: 0.7rem 1rem;
+      position:fixed;
+      z-index: 100;
     }
 
     .navbar-brand {
@@ -28,23 +28,8 @@
       color: FFFfff;
     }
 
-    .dropdown-menu {
-      background-color:#000;
-    }
-
-    .dropdown-item {
-      color: #ccc;
-      font-size: 0.95rem;
-      padding: 8px;
-      border-bottom: 1px solid white;
-    }
-
-    .dropdown-item:hover {
-      background-color: #333;
-      color: #fff;
-    }
-
-    /* Highlight active dropdown trigger */
+     
+    
     .nav-item.dropdown.show > .nav-link {
       background-color: #1f1f1f;
       color: #00bfff !important;
@@ -55,11 +40,6 @@
         background-color: #000;
         padding: 1rem;
         border-top: 1px solid #222;
-      }
-
-      .dropdown-menu {
-        position: static !important;
-        float: none;
       }
     }
 
