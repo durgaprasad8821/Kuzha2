@@ -153,6 +153,9 @@
                 <li>Develop practical skills and learn from industry mentors.</li>
                 <li>Boost your resume and improve your chances of full-time employment.</li>
             </ul>
+             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#popupFormModal">
+              Apply
+            </button>
             </div>
       </div>
     </div>
@@ -212,20 +215,13 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-  // Show modal on page load
-  window.onload = function () {
-    const myModal = new bootstrap.Modal(document.getElementById('popupFormModal'));
-    myModal.show();
-  };
-
-  // Handle form submission
-  document.getElementById('popupForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    alert('Form submitted successfully!');
-    const modalElement = document.getElementById('popupFormModal');
-    const modal = bootstrap.Modal.getInstance(modalElement);
-    modal.hide();
-  });
+    document.getElementById('popupForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Form submitted successfully!');
+      const modalElement = document.getElementById('popupFormModal');
+      const modal = bootstrap.Modal.getInstance(modalElement);
+      modal.hide();
+    });
 </script>
 </body>
 </html>
